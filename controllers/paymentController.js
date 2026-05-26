@@ -27,14 +27,14 @@ try {
 })),
 
 notification_url:
-  "https://comma-atop-helping.ngrok-free.dev/api/payments/webhook",
+   "https://ecommerce-backend-mkov.onrender.com/api/payments/webhook",
 
         external_reference: orderId,
 
         back_urls: {
-  success: "http://localhost:5173/payment-success",
-  failure: "http://localhost:5173/payment-failure",
-  pending: "http://localhost:5173/payment-pending"
+  success: `${process.env.CLIENT_URL}/payment-success`,
+  failure: `${process.env.CLIENT_URL}/payment-failure`,
+  pending: `${process.env.CLIENT_URL}/payment-pending`
 }
       }
     });

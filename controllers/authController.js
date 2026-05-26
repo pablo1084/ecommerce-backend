@@ -90,9 +90,7 @@ await transporter.sendMail({
     </p>
 
     <a
-      href="
-http://localhost:5173/verify/${verificationToken}
-"
+      href="${process.env.CLIENT_URL}/verify/${verificationToken}"
       style="
         display: inline-block;
         background: black;
